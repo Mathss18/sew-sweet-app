@@ -25,7 +25,7 @@ export default function LoginPage() {
   const { mutate: login, isLoading: isBeingSubmited } = useMutation(authService.login, {
     onSuccess: ({ data }) => {
       console.log(data.accessToken);
-      router.push("/dashboard");
+      router.push("/admin");
     },
     onError: (error: any) => {
       alert(error.message);
